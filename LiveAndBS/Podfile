@@ -1,0 +1,19 @@
+platform :ios, '8.0’
+
+target 'LiveAndBS' do
+  
+pod 'pop'
+pod 'NJKWebViewProgress'
+pod 'DACircularProgress'
+pod 'SVProgressHUD'
+pod 'AFNetworking'
+pod 'FMDB'
+pod 'Masonry'
+#pod 'MBProgressHUD'
+pod 'MJExtension'
+#pod 'MLTransition'
+pod 'SDWebImage'
+pod 'MJRefresh'
+
+
+end
