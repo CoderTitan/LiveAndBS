@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="RecomCategaryViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5b-EO-EZk" userLabel="底部分割线">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="kdw-2i-f4f"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgJ-pQ-ye1" userLabel="左边红色标识">
+                        <color key="backgroundColor" red="1" green="0.32765453430000002" blue="0.33131160700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="5" id="fUd-G9-1dz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CgJ-pQ-ye1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6CN-vn-Bd7"/>
+                    <constraint firstAttribute="trailing" secondItem="J5b-EO-EZk" secondAttribute="trailing" id="EdY-07-ipT"/>
+                    <constraint firstItem="CgJ-pQ-ye1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Jtp-ZC-OzZ"/>
+                    <constraint firstItem="J5b-EO-EZk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="n3D-sp-bcb"/>
+                    <constraint firstAttribute="bottom" secondItem="J5b-EO-EZk" secondAttribute="bottom" id="qp3-Ae-RCJ"/>
+                    <constraint firstAttribute="bottom" secondItem="CgJ-pQ-ye1" secondAttribute="bottom" id="xPE-9c-GGK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftView" destination="CgJ-pQ-ye1" id="Sth-IF-Zq8"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

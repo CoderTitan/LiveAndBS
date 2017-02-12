@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewController">
+            <connections>
+                <outlet property="goBackItem" destination="RCw-jS-uc2" id="yd1-XM-dQw"/>
+                <outlet property="goForwardItem" destination="dqy-1X-x99" id="cQY-Kx-9tP"/>
+                <outlet property="progressView" destination="rIR-dX-f2q" id="F2a-Cv-wmy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="Xu8-IV-Tjj" id="kqN-6n-6js"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-IV-Tjj">
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-lk-GpS">
+                    <items>
+                        <barButtonItem title="←" id="RCw-jS-uc2">
+                            <connections>
+                                <action selector="goBack:" destination="-1" id="5Qq-6a-t3c"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="→" id="dqy-1X-x99">
+                            <connections>
+                                <action selector="goForward:" destination="-1" id="lfS-d1-oBs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="Jty-3c-sEw"/>
+                        <barButtonItem systemItem="refresh" id="St2-gg-jY5">
+                            <connections>
+                                <action selector="refresh:" destination="-1" id="P83-jH-eVa"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rIR-dX-f2q"/>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rIR-dX-f2q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0HK-Vu-c7y"/>
+                <constraint firstAttribute="trailing" secondItem="rIR-dX-f2q" secondAttribute="trailing" id="1yH-fO-lv9"/>
+                <constraint firstAttribute="bottom" secondItem="Pyx-lk-GpS" secondAttribute="bottom" id="GRz-4p-mA3"/>
+                <constraint firstItem="Pyx-lk-GpS" firstAttribute="top" secondItem="Xu8-IV-Tjj" secondAttribute="bottom" id="KUr-Kf-zF3"/>
+                <constraint firstItem="rIR-dX-f2q" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="UDG-lr-c8W"/>
+                <constraint firstAttribute="trailing" secondItem="Pyx-lk-GpS" secondAttribute="trailing" id="UbC-JS-gqH"/>
+                <constraint firstItem="Xu8-IV-Tjj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WOV-lJ-cdN"/>
+                <constraint firstItem="Xu8-IV-Tjj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bBI-Iq-PMq"/>
+                <constraint firstAttribute="trailing" secondItem="Xu8-IV-Tjj" secondAttribute="trailing" id="cai-WI-j2Z"/>
+                <constraint firstItem="Pyx-lk-GpS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oQu-kC-k79"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

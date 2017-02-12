@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "BSTabBarController.h"
+#import "ADPushGuideView.h"
+#import "BSKeyWindow.h"
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -17,10 +19,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    BSTabBarController *tabbarController = [[BSTabBarController alloc] init];;
+    tabbarController.delegate = self;
+    self.window.rootViewController = tabbarController;
+    
+    [self.window makeKeyAndVisible];
+    [ADPushGuideView show];
+    
     return YES;
 }
-
-
+#pragma mark - UITabBarControllerDelegate
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    // 发出一个通知
+    [BSNotific postNotificationName:BSTabBarDidSelectNotification object:nil userInfo:nil];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
